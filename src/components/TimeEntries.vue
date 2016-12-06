@@ -95,11 +95,11 @@
     },
     methods: {
       deleteTimeEntry (timeEntry) {
-        //这个方法用于删除某一项计划
+        // 这个方法用于删除某一项计划
         let index = this.timeEntries.indexOf(timeEntry)
         if (window.confirm('确定要删除吗?')) {
           this.timeEntries.splice(index, 1)
-          //这里会派发到父组件上，执行父组件events里的deleteTime方法
+          // 这里会派发到父组件上，执行父组件events里的deleteTime方法
           this.$dispatch('deleteTime', timeEntry)
         }
       }
@@ -107,7 +107,7 @@
     events: {
       timeUpdate (timeEntry) {
         this.timeEntries.push(timeEntry)
-        //继续向上派发
+        // 继续向上派发
         return true
       }
     }
