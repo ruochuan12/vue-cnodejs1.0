@@ -1,0 +1,7 @@
+node_modules/
+.idea/modules.xml
+.idea/vue-cnodejs1.0.iml
+.idea/workspace.xml
+.idea/jsLibraryMappings.xml
+.idea/libraries/vue_cnodejs1_0_node_modules.xml
+.idea/vcs.xml
