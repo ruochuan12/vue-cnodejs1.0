@@ -13,6 +13,8 @@ import LogTime from './components/LogTime.vue'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 
+const router = new VueRouter()
+
 // 路由map
 router.map({
     '/Home': {
