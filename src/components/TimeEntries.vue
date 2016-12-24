@@ -1,11 +1,11 @@
-// src/components/TimeEntries.vue
+<!--// src/components/TimeEntries.vue-->
 
 <template>
     <div>
-        //`v-if`是vue的一个指令
-        //`$route.path`是当前路由对象的路径，会被解析为绝对路径当
-        //`$route.path !== '/time-entries/log-time'`为`true`是显示，`false`，为不显示。
-        //v-link 路由跳转地址
+        <!--//`v-if`是vue的一个指令-->
+        <!--//`$route.path`是当前路由对象的路径，会被解析为绝对路径当-->
+        <!--//`$route.path !== '/time-entries/log-time'`为`true`是显示，`false`，为不显示。-->
+        <!--//v-link 路由跳转地址-->
         <button
             v-if="$route.path !== '/time-entries/log-time'"
             v-link="'/time-entries/log-time'"
@@ -19,21 +19,21 @@
 
         <hr>
 
-        //下一级视图
+        <!--//下一级视图-->
         <router-view></router-view>
 
         <div class="time-entries">
             <p v-if="!timeEntries.length"><strong>还没有任何任务</strong></p>
 
             <div class="list-group">
-                //v-for 循环渲染
+                <!--//v-for 循环渲染-->
                 <a class="list-group-item" v-for="timeEntry in timeEntries">
                     <div class="row">
 
                         <div class="col-sm-2 user-details">
-                            //`:src`属性，这个是vue的属性绑定简写`v-bind`可以缩写为`:`
-                            // 比如a标签的`href`可以写为`:href`
-                            //并且在vue的指令里就一定不要写插值表达式了(`:src={{xx}}`)，vue自己会去解析
+                            <!--//`:src`属性，这个是vue的属性绑定简写`v-bind`可以缩写为`:`-->
+                            <!--// 比如a标签的`href`可以写为`:href`-->
+                            <!--//并且在vue的指令里就一定不要写插值表达式了(`:src={{xx}}`)，vue自己会去解析-->
                             <img :src="timeEntry.user.image" class="avatar img-circle img-responsive"/>
                             <p class="text-center">
                                 <strong>
@@ -58,10 +58,7 @@
                         </div>
 
                         <div class="col-sm-1">
-                            <button
-                                class="btn btn-xs btn-danger delete-button"
-                            //事件绑定简写 @xxx
-                            @click="deleteTimeEntry(timeEntry)">
+                            <button class="btn btn-xs btn-danger delete-button" @click="deleteTimeEntry(timeEntry)">
                             X
                             </button>
                         </div>
@@ -84,30 +81,30 @@
                 comment: '我的一个备注',
                 totalTime: 1.5,
                 date: '2016-05-01'
-            }
+            };
             return {
                 timeEntries: [existingEntry]
-            }
+            };
         },
         methods: {
             deleteTimeEntry (timeEntry) {
             // 这个方法用于删除某一项计划
-                let index = this.timeEntries.indexOf(timeEntry)
+                let index = this.timeEntries.indexOf(timeEntry);
                 if (window.confirm('确定要删除吗?')) {
-                    this.timeEntries.splice(index, 1)
+                    this.timeEntries.splice(index, 1);
                     // 这里会派发到父组件上，执行父组件events里的deleteTime方法
-                    this.$dispatch('deleteTime', timeEntry)
+                    this.$dispatch('deleteTime', timeEntry);
                 }
             }
         },
         events: {
             timeUpdate (timeEntry) {
-                this.timeEntries.push(timeEntry)
+                this.timeEntries.push(timeEntry);
                 // 继续向上派发
-                return true
+                return true;
             }
         }
-    }
+    };
 
 </script>
 <style>

@@ -24,24 +24,23 @@
 </template>
 
 <script>
-    import Sidebar from './components/Sidebar.vue'
+    import Sidebar from './components/Sidebar.vue';
     export default {
         components: { 'sidebar': Sidebar },
         data () {
             return {
                 totalTime: 1.5
-            }
+            };
         },
         events: {
             timeUpdate (timeEntry) {
-                this.totalTime += parseFloat(timeEntry.totalTime)
+                this.totalTime += parseFloat(timeEntry.totalTime);
             },
             deleteTime (timeEntry) {
-                this.totalTime -= parseFloat(timeEntry.totalTime)
+                this.totalTime -= parseFloat(timeEntry.totalTime);
             }
         }
-    }
-
+    };
 </script>
 
 <style>

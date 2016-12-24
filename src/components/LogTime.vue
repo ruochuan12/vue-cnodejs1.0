@@ -51,15 +51,15 @@
                         image: 'https://sfault-avatar.b0.upaiyun.com/888/223/888223038-5646dbc28d530_huge256'
                     }
                 }
-            }
+            };
         },
         methods: {
             save () {
-                let timeEntry = this.timeEntry
-                this.$dispatch('timeUpdate', timeEntry)
-                this.timeEntry = {}
+                let timeEntry = this.timeEntry;
+                this.$dispatch('timeUpdate', timeEntry);
+                this.timeEntry = {};
             }
         }
-    }
+    };
 
 </script>

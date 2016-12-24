@@ -1,4 +1,4 @@
-// src/components/Home.vue
+<!--// src/components/Home.vue-->
 
 <template>
     <div class="jumbotron">
