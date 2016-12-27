@@ -8,14 +8,14 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:9000
 npm run dev
 
 # build for production with minification
 npm run build
 
 # run unit tests
-npm run unit
+npm run unit 
 
 # run e2e tests
 npm run e2e
@@ -28,3 +28,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 >参考链接：
 >[(1/2)Vue构建单页应用最佳实战](https://segmentfault.com/a/1190000005009052)
+>[(2/2)Vue构建单页应用最佳实战](https://segmentfault.com/a/1190000005268225)
