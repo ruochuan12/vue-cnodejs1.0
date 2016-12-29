@@ -30,3 +30,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 >[(1/2)Vue构建单页应用最佳实战](https://segmentfault.com/a/1190000005009052)
 >[(2/2)Vue构建单页应用最佳实战](https://segmentfault.com/a/1190000005268225)
 >[使用Vue快速开发单页应用－主体结构](https://segmentfault.com/a/1190000006711743) [博客原文：](http://hiluluke.cn/2016/08/04/vue-spa/)
+>[采用vue+webpack构建的单页应用——私人博客MintloG诞生记](https://segmentfault.com/a/1190000004637681?_ea=683193)
