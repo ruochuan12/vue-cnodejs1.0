@@ -17,6 +17,8 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    "indent": [2, 4, { "SwitchCase": 1 }],   // switch case 缩进
+    'semi': [2, "always"]
   }
 }
